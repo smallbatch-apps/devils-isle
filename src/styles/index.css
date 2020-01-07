@@ -1,0 +1,72 @@
+@tailwind preflight;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat'); */
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English');
+
+body {
+
+}
+
+
+.relative.flex-shrink:hover > .category-list {
+  display: block;
+}
+
+p.description a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+p.description a:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.category-critter {
+  height: 220px;
+  background-position: 0px 40px;
+}
+
+p.description > p {
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.stat-bar {
+  /* background: linear-gradient(to right, #00FF00, #FFFF00, #FFFF00, #FF0000); */
+  height: 15px;
+}
+
+.stat-bar div {
+  width: 25px;
+  margin-right: 3px;
+  border: 1px solid black;
+  height: 15px;
+  float: left;
+}
+
+.stat-bar div:nth-child(1), .stat-bar div:nth-child(2), .stat-bar div:nth-child(3) {
+  background-color: #38C172;
+  border-color: #1A4731;
+}
+
+.stat-bar div:nth-child(4), .stat-bar div:nth-child(5), .stat-bar div:nth-child(6), .stat-bar div:nth-child(7) {
+  background-color: #FFED4A;
+  border-color: #684F1D;
+}
+
+.stat-bar div:nth-child(8), .stat-bar div:nth-child(9), .stat-bar div:nth-child(10) {
+  background-color: #E3342F;
+  border-color: #621B18;
+}
+
+.feature {
+  font-family: 'IM Fell English', sans-serif;
+}
+
+/* .critter-image {
+  width: 100%;
+} */

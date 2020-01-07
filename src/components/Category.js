@@ -14,9 +14,9 @@ const Category = props => {
 
     <h2 className="text-xl uppercase mb-5 feature">Creatures</h2>
 
-    <div className="flex flex-wrap">
+    <div className="md:flex flex-wrap">
       {critters.filter(({image, description}) => image && description).map(critter => {
-        return <div className="flex-1 w-1/4 p-5 mb-5" key={critter.slug}>
+        return <div className="md:w-1/4 p-5 mb-5" key={critter.slug}>
           <a className="category-critter w-full bg-cover inline-block justify-between bg-no-repeat bg-top"
             href={`/critters/${cat.slug}/${critter.slug}`}
             style={{backgroundImage: `url(${critter.image.imageUrl})`}}

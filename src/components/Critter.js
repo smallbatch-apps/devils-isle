@@ -1,11 +1,12 @@
 import React from 'react';
+
+import {getCritter} from '../services/dataservice';
 const rmj = require('render-markdown-js');
 
-const Critter = (props) => {
-  if (props.data.loading) {
-    return <div>Loading...</div>;
-  }
-  const critter = props.data.critter;
+const Critter = props => {
+
+  const critter = getCritter(props.match.params.critter);
+
   return <div className="w-full flex">
     <div className="flex-1">
       <h2 className="text-2xl uppercase mb-5 text-green-lightest feature">{critter.name}</h2>
@@ -23,7 +24,7 @@ const Critter = (props) => {
       <div className="mb-5 mt-1 text-green-lightest"><em>{critter.species}</em></div>
 
       <span className="uppercase text-sm feature">Category</span>
-      <div className="mb-5 mt-1"><a href={`/critters/${critter.category}`} className="capitalize no-underline text-green-lightest hover:text-white hover:underline">{critter.category}</a></div>
+      <div className="mb-5 mt-1"><a href={`/critters/${critter.category}`} className="capitalize no-underline text-green-lighter font-semibold hover:text-white hover:underline">{critter.category}</a></div>
 
       <span className="uppercase text-sm feature">Appearance</span>
       <div className="stat-bar flex flex-row mb-5 mt-1">{ createGraph(critter.appearance) }</div>
